@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     setAuthState({ token: null, user: null });
   };
 
-  axios.defaults.baseURL = "http://localhost:3000/api";
+  axios.defaults.baseURL = "https://server-side-nu-sage.vercel.app/api";
   axios.defaults.headers.common["Authorization"] = `Bearer ${authState?.token}`;
 
   return (
